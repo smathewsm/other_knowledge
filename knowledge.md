@@ -40,17 +40,6 @@ This setting is not configurable.
 - A connection existing for longer than 60 minutes.  After 60 minutes a session will timeout regardless of activity.
 This setting is not configurable.
 - The VSI migrating to another host during compute node maintenance.
-- Internal issues such as upgrade/failure of any elements in the path. The following is a non exhaustive list of
-examples:
-  - Global Load Balancer failover - if the current path has a failure, the websocket will drop
-  - RIAS Ingress failover
-  - RCOS Handler failover / pod restart
-  - RIAS Proxy failover
-  - Zonal ingress failover
-  - `proxy-pod` failover / restart
-  - `compute-agent` pod upgrade / restart
-  - qemu failure (though at this point, the VM has likely failed anyway)
-  - Significant network failure anywhere along the path
 
 It should be noted that VSI reboot/reset, or any other VSI operation that doesn't result in a re-schedule of the VSI
 will maintain the console.
