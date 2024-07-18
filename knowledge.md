@@ -17,6 +17,8 @@ From the UI of an instance, the user will select a Console task that delivers th
 web browser.  The user will choose the console type (VNC vs Serial) which will result in a new window with the
 connected console.
 
+To verify that a console session is connected the text "Connected" should appear on the console.
+
 Should the console connection fail (inactive timeout or other reason), an error messages with a Reconnect option will
 be provided allowing the user to easily reconnect the console.
 
@@ -42,6 +44,10 @@ This setting is not configurable.
 - A connection existing for longer than 60 minutes.  After 60 minutes a session will timeout regardless of activity.
 This setting is not configurable.
 - The VSI migrating to another host during compute node maintenance.
+
+
+The maximum XYZ Cloud console session duration is 60 minutes.
+The XYZ Cloud console idle session duration is 10 minutes.
 
 It should be noted that VSI reboot/reset, or any other VSI operation that doesn't result in a re-schedule of the VSI
 will maintain the console.
