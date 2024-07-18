@@ -3,7 +3,7 @@ Console Service for Customer Console Access in XYZ Cloud
 
 # 2. Project Overview
 
-The project provides XYZ cloud console access to customer virtual machines through the GUI and API.  The user can choose
+The project provides XYZ Cloud console access to customer virtual machines through the GUI and API.  The user can choose
 between a graphical (VNC) console, or a serial (TTY) console depending on their needs.
 
 The graphical and serial consoles can be configured within the boot image, with the boot-loader and the kernel boot
@@ -19,6 +19,8 @@ connected console.
 
 Should the console connection fail (inactive timeout or other reason), an error messages with a Reconnect option will
 be provided allowing the user to easily reconnect the console.
+
+To disconnect a user should select the Disconnect option in the UI while connected to the instance console.
 
 ### API
 
